@@ -1,8 +1,8 @@
 let Dal = require("../../../../../Dal/Login/Users/Admin/InsertData/FromUpload");
 
 let Upload = ({ inDataPK }) => {
-    
-    Dal.Upload({ inDataPK })
+
+    return Dal.Upload({ inDataPK })
 
 };
 

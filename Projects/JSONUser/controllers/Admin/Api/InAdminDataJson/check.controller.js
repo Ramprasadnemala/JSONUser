@@ -28,4 +28,29 @@ let TokenToCookie = (req, res) => {
     });
 };
 
-module.exports = { TokenToCookie };
+let TokenReturnOnly = (req, res) => {
+    let LocalUserName = req.body.inUserName;
+    let LocalPassWord = req.body.inPassword;
+
+    Repo.ForUserAndPassword({
+        inUserName: LocalUserName,
+        inPassWord: LocalPassWord
+    }).then(PromiseDataFromUserCheck => {
+        if (PromiseDataFromUserCheck.KTF) {
+            if (PromiseDataFromUserCheck.kPK > 0) {
+                CommonjwtFunc.CreateToken({
+                    inUserName: LocalUserName,
+                    inDataPk: PromiseDataFromUserCheck.kPK
+                }).then((PromiseDataFromJwt) => {
+                    res.end(PromiseDataFromJwt.KToken);
+                });
+            } else {
+                res.json(PromiseDataFromUserCheck);
+            };
+        } else {
+            res.json(PromiseDataFromUserCheck);
+        };
+    });
+};
+
+module.exports = { TokenToCookie, TokenReturnOnly };

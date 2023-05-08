@@ -1,15 +1,18 @@
 let Repo = require("../../../../../Repository/Login/Users/Admin/InsertData/FromUpload");
 
 let Upload = (req, res) => {
-    console.log("kkkkkkkk",req.KeshavSoft);
-    let LocalDataPk = req.KeshavSoft.DataPk;
 
-    Repo.Upload({
+    // let LocalDataPk = req.KeshavSoft.DataPk;
+
+    let LocalDataPk = req.params.inJsonPk;
+    console.log("kkkkkkkk", req.params, LocalDataPk);
+    let LocalFromRepo = Repo.Upload({
         inDataPK: LocalDataPk
-
-    }).then((PromieData) => {
-        res.end(JSON.stringify(PromieData));
     });
+    console.log("LocalFromRepo", LocalFromRepo);
+    // .then((PromieData) => {
+    //     res.end(JSON.stringify(PromieData));
+    // });
 };
 
 module.exports = { Upload };

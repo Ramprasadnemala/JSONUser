@@ -1,0 +1,5 @@
+GET http://localhost:4116/JSONUser/Login/Users/Admin/InsertData/FromUpload/901
+Cookie: KUMAToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6IktFU0hBViIsIkRhdGFQayI6IjEiLCJpYXQiOjE2ODM1NjQ1NTJ9.7FvqkwYsNNSAAzEetDo4Su0kCr4dDnJ53kOO5liTHl4
+content-type: application/json
+
+{}

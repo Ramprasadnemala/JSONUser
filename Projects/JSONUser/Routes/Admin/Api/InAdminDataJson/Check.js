@@ -34,5 +34,6 @@ router.post('/LoginCheck', (req, res, next) => {
 });
 
 router.post('/TokenToCookie', Controller.TokenToCookie);
+router.post('/TokenReturnOnly', Controller.TokenReturnOnly);
 
 module.exports = router;
