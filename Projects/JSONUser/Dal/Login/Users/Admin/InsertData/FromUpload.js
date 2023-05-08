@@ -1,4 +1,4 @@
-let Datasupply = require("../../../../../..");
+let Datasupply = require("../../../../../../../DataSupply/Fs/Config/JSONFolder/UserFolders/InsertFolder/FromUpload");
 
 let Upload = ({ inDataPK }) => {
     if (inDataPK > 0) {

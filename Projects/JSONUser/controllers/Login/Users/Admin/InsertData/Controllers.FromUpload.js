@@ -1,6 +1,7 @@
 let Repo = require("../../../../../Repository/Login/Users/Admin/InsertData/FromUpload");
 
 let Upload = (req, res) => {
+    console.log("kkkkkkkk",req.KeshavSoft);
     let LocalDataPk = req.KeshavSoft.DataPk;
 
     Repo.Upload({
