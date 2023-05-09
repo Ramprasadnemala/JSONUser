@@ -1,11 +1,7 @@
 var express = require('express');
 var router = express.Router();
-let Repo = require("../../../../Repository/Admin/UserFolder/FromUpload/ShowDatas");
+let Controllers = require("../../../../controllers/Admin/UserFolder/FromUpload/Controllers.ShowDatas");
 
-router.get('/', function (req, res, next) {
-    Repo.ShowData().then(PromiseData => {
-        res.json(PromiseData);
-    });
-});
+router.get('/', Controllers.ShowData)
 
 module.exports = router;

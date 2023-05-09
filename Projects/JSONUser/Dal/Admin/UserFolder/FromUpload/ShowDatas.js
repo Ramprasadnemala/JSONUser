@@ -1,11 +1,8 @@
-let CommonUserFuncs = require("../../../../../../DataSupply/Fs/Config/JSONUploadFolder/UserFolders/PullFolders/getDirectories");
+let CommonUserFuncs = require("../../../../../../DataSupply/Fs/Config/Compare/Upload-Json/ForPk");
 
-let ShowData = async () => {
-    let LocalReturnData = await CommonUserFuncs.StartFunc();
+let ShowData = () => {
 
-    if (LocalReturnData.KTF) {
-        return await LocalReturnData.JsonData.data;
-    }
+    return CommonUserFuncs.StartFunc();
 };
 
 module.exports = { ShowData };
