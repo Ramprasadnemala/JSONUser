@@ -33,6 +33,8 @@ router.post('/LoginCheck', (req, res, next) => {
     });
 });
 
+
+router.post('/LoginCheck1', Controller.LoginCheck1);
 router.post('/TokenToCookie', Controller.TokenToCookie);
 router.post('/TokenReturnOnly', Controller.TokenReturnOnly);
 
